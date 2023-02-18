@@ -31,6 +31,7 @@ public class BlogService {
         //updating the blog details
         blog.setTitle(title);
         blog.setContent(content);
+        blog.setPubDate(new Date());
 
         //Updating the userInformation and changing its blogs
         User user = userRepository1.findById(userId).get();
