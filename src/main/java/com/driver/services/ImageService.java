@@ -15,10 +15,10 @@ public class ImageService {
     @Autowired
     ImageRepository imageRepository2;
 
-    public Image addImage(Integer blogId, String description, String dimensions) throws Exception{
+    public Image addImage(Integer blogId, String description, String dimensions) {//throws Exception
         //add an image to the blog
-        if(!blogRepository2.findById(blogId).isPresent())
-            throw new Exception();
+//        if(!blogRepository2.findById(blogId).isPresent())
+//            throw new Exception();
 
         Blog blog = blogRepository2.findById(blogId).get();
 
@@ -38,10 +38,10 @@ public class ImageService {
         return image;
     }
 
-    public void deleteImage(Integer id) throws Exception{
+    public void deleteImage(Integer id) {//throws Exception
 
-        if(!imageRepository2.findById(id).isPresent())
-            throw new Exception();
+//        if(!imageRepository2.findById(id).isPresent())
+//            throw new Exception();
 
         Image image = imageRepository2.findById(id).get();
 
