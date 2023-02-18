@@ -43,14 +43,14 @@ public class ImageService {
 //        if(!imageRepository2.findById(id).isPresent())
 //            throw new Exception();
 
-        Image image = imageRepository2.findById(id).get();
+       /* Image image = imageRepository2.findById(id).get();
 
         Blog blog = image.getBlog();
         List<Image> imageList = blog.getImageList();
         imageList.remove(image);
         blog.setImageList(imageList);
 
-        blogRepository2.save(blog);
+        blogRepository2.save(blog);*/
 
         imageRepository2.deleteById(id);
     }

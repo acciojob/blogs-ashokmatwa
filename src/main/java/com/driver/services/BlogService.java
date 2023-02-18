@@ -52,7 +52,7 @@ public class BlogService {
 //        if(!blogRepository1.findById(blogId).isPresent())
 //            throw new Exception();
 
-        Blog blog = blogRepository1.findById(blogId).get();
+     /*   Blog blog = blogRepository1.findById(blogId).get();
 
         //delete from user also ??
         User user = blog.getUser();
@@ -60,7 +60,7 @@ public class BlogService {
         blogList.remove(blog);
         user.setBlogList(blogList);
 
-        userRepository1.save(user);
+        userRepository1.save(user);*/
 
         //for images ?? --> cascade ??
         blogRepository1.deleteById(blogId); // corresponding images automatically delete --> cascade
